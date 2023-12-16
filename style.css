@@ -1,9 +1,95 @@
-* {
-    padding: 0; 
-    margin: 0;
-}
+/* ----------- General Styling ----------- */
 
 @font-face {
     font-family: "norse-bold";
     src: url("./fonts/Norse-Bold.otf") format("opentype");
+}
+
+:root {
+    --dark-sidebar-background: rgb(15,28,54);
+    --dark-main-background: rgb(66, 85, 99);
+    --light-font: white;
+
+}
+
+* {
+    padding: 0; 
+    margin: 0;
+    border: red 1px dotted;
+    font-family: "Poppins", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", 
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* ----------- Entire Screen ----------- */
+
+main {
+    height: 100vh;
+    display: flex;
+    color: var(--light-font);
+}
+
+/* ----------- Sidebar ----------- */
+
+.sidebar {
+    min-height: 100%;
+    min-width: 40%;
+    flex-basis: 40%;
+    background-color: var(--dark-sidebar-background);
+    display: flex;
+    align-items: center;
+}
+
+.icon-sidebar {
+    width: 90%;
+    height: 95%;
+    background-image: url(images/imageedit_1_3452619528.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-title {
+    color: white;
+}
+
+/* ----------- Main Content ----------- */
+
+.main {
+    flex-basis: 60%;
+    background-color: var(--dark-main-background);
+}
+
+
+.content {
+    margin: 7rem auto 5rem;
+    width: 90%;
+}
+
+.main-content-p {
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.5rem;
+}
+
+
+
+.form {
+    padding-bottom: 10rem;
+}
+
+.bottom-section {
+    padding-bottom: 13rem;
 }

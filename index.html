@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Sign-Up Form</title>
 
 </head>
@@ -11,10 +14,9 @@
     <main class="main-content">
 
         <div class="sidebar">
-            <img src = "images/large-background-image.jpg" alt = "Streaks of neon lights as 
-            art decoration">
-            <div class="logo">
-                <img src = "images/image-sidebar.jpg" alt = "instagram logo">
+            <div class = "icon-sidebar">
+                <!-- <img src="images/large-background-image.jpg" alt="neon tech lights posted up on a wall glowing in the dark" class="background-image"> -->
+                <img class = "logo-image" src = "images/image-sidebar.jpg" alt = "instagram logo">
                 <h1 class = "logo-title">Instagram</h1>
             </div>
         </div>
@@ -22,40 +24,34 @@
         <div class="main">
 
             <div class="content">
-                <p>This is not a real online service! You know you need something like this in your 
+                <p class = "main-content-p">This is not a real online service! You know you need something like this in your
                     life to help you realize your deepest dreams. Sign up now to get started. </p>
-                <p>You know you want to.</p>
+                <p>You <em>know you</em> want to.</p>
             </div>
-
+            
             <div class="form">
                 <h3>Get Started</h3>
                 <form action="" method = "POST" id = "user-form">
-                    
                     <div class="form-control">
                         <label for="first-name">First Name</label>
                         <input type="text" id="first-name" name="first-name" required>
                     </div>
-
                     <div class="form-control">
                         <label for="last-name">Last Name</label>
                         <input type="text" id="last-name" name="last-name" required>
                     </div>
-
                     <div class="form-control">
                         <label for="email-address">Email</label>
                         <input type="email" id="email-address" name="email-address" required>
                     </div>
-
                     <div class="form-control">
                         <label for="phone-number">First Name</label>
                         <input type="tel" id="phone-number" name="phone-number" required>
                     </div>
-
                     <div class="form-control">
                         <label for="user-password">Password</label>
                         <input type="password" id="user-password" name="user-password" required>
                     </div>
-
                     <div class="form-control">
                         <label for="user-password-confirm">Confirm Password</label>
                         <input type="password" id="user-passsword-confirm" name="user-password-confirm" required>
