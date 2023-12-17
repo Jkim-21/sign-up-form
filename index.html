@@ -6,22 +6,24 @@
     <link rel = "stylesheet" href = "style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Lines&display=swap" rel="stylesheet">
     <title>Sign-Up Form</title>
 
 </head>
 <body>
     <main class="main-content">
 
-        <div class="sidebar">
-            <div class = "icon-sidebar">
-                <!-- <img src="images/large-background-image.jpg" alt="neon tech lights posted up on a wall glowing in the dark" class="background-image"> -->
-                <img class = "logo-image" src = "images/image-sidebar.jpg" alt = "instagram logo">
-                <h1 class = "logo-title">Instagram</h1>
+        <section class="sidebar">
+            <img class = "logo-image2" src = "images/sidebar-icon2.png" alt = "person sat down looking at computer on a desk, which has stickers on the back of its monitor.">
+            <div class="logo-strip">
+                <img class = "logo-image" src = "images/sidebar-icon.png" alt = "instagram logo">
+                <h1 class = "logo-title">
+                    Instagram
+                </h1>
             </div>
-        </div>
+        </section>
     
-        <div class="main">
+        <section class="main">
 
             <div class="content">
                 <p class = "main-content-p">This is not a real online service! You know you need something like this in your
@@ -45,7 +47,7 @@
                         <input type="email" id="email-address" name="email-address" required>
                     </div>
                     <div class="form-control">
-                        <label for="phone-number">First Name</label>
+                        <label for="phone-number">Phone Number</label>
                         <input type="tel" id="phone-number" name="phone-number" required>
                     </div>
                     <div class="form-control">
@@ -57,14 +59,12 @@
                         <input type="password" id="user-passsword-confirm" name="user-password-confirm" required>
                     </div>
                 </form>
+                <div class="bottom-section">
+                    <button type="submit" form="user-form">Submit</button>
+                    <p>Already have an account?<a href="#">Log in</a></p>
+                </div>
             </div>
-
-            <div class="bottom-section">
-                <button type="submit" form="user-form">Submit</button>
-                <p>Already have an account?<a href="#">Log in</a></p>
-            </div>
-
-        </div>
+        </section>
     </main>
 </body>
 </html>

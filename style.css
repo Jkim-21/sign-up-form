@@ -1,21 +1,35 @@
 /* ----------- General Styling ----------- */
 
 @font-face {
-    font-family: "norse-bold";
-    src: url("./fonts/Norse-Bold.otf") format("opentype");
+    font-family: "breve-sc";
+    src: url("./fonts/Breve-SC.ttf") format("opentype");
+}
+
+@font-face { 
+    font-family: "instagram-sans";
+    src: url("./fonts/instagram-sans/Instagram\ Sans.woff") format("woff");
+}
+
+@font-face { 
+    font-family: "quantify-bold";
+    src: url("./fonts/Quantify\ Bold\ v2.6.ttf");
 }
 
 :root {
-    --dark-sidebar-background: rgb(15,28,54);
-    --dark-main-background: rgb(66, 85, 99);
-    --light-font: white;
-
+    --text-color: rgb(255, 255, 255);
+    --sidebar-background-color: rgb(15,28,54);
+    --logo-background-color: rgb(0, 0, 0, 0.6);
+    --top-background-color: #222222;
+    --main-background-color: rgb(66, 83, 102);
+    --input-border-color: #2a2a2a;
+    --input-border-focused-color: #b83d47;
 }
 
 * {
     padding: 0; 
     margin: 0;
-    border: red 1px dotted;
+    box-sizing: border-box;
+    /* border: red 1px dotted; */
     font-family: "Poppins", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", 
     "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -30,7 +44,7 @@ body {
 main {
     height: 100vh;
     display: flex;
-    color: var(--light-font);
+    color: var(--text-color);
 }
 
 /* ----------- Sidebar ----------- */
@@ -39,57 +53,134 @@ main {
     min-height: 100%;
     min-width: 40%;
     flex-basis: 40%;
-    background-color: var(--dark-sidebar-background);
-    display: flex;
-    align-items: center;
-}
-
-.icon-sidebar {
-    width: 90%;
-    height: 95%;
-    background-image: url(images/imageedit_1_3452619528.png);
-    background-size: cover;
+    background: url(images/large-sidebar-background.png),
+    linear-gradient(to top, rgba(217,70,73,255), rgba(51,34,62,255));
+    background-size: 98% 98%, cover;
     background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
+    background-position: center; 
+    padding-top: 1rem;
 }
 
-.logo-image {
-    width: 50px;
-    height: 50px;
+.logo-image2 {
+    width: 23rem;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.logo-strip {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: var(--logo-background-color);
+    position: relative;
+    width: 98%;
+    margin: auto;
 }
 
 .logo-title {
+    font-size: 4rem;
+    font-family: "instagram-sans";
     color: white;
+    position: relative;
+    right: 15px;
+}
+
+.logo-image {
+    max-width: 7rem;
+    object-fit: cover;
+    position: relative; 
+    right: 10px;
 }
 
 /* ----------- Main Content ----------- */
 
 .main {
     flex-basis: 60%;
-    background-color: var(--dark-main-background);
+    background-color: var(--main-background-color);
 }
 
+/* ----------- Top Main Content ----------- */
 
 .content {
-    margin: 7rem auto 5rem;
-    width: 90%;
+    padding: 5rem 3rem 3rem;
+    width: 100%;
+    margin: auto;
+    background-color: var(--top-background-color);
 }
 
 .main-content-p {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
-
-
+/* ----------- Form Content ----------- */
 .form {
-    padding-bottom: 10rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
 }
 
+.form > h3 {
+    margin: auto;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+#user-form {
+    width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    flex-basis: 40%;
+}
+
+.form-control:nth-child(odd) {
+    margin-right: 8rem;
+}
+
+.form-control:nth-child(-n+4) {
+    margin-bottom: 2rem;
+}
+
+label {
+    font-family: "quantify-bold";
+    display: block;
+    letter-spacing: 0.1rem;
+    margin-left: 0.3rem;
+    font-size: 1.3rem;
+}
+
+input {
+    appearance: none;
+    font-family: "Poppins";
+    display: block;
+    width: 15rem;
+    height: 1.8rem;
+    line-height: normal;
+    border-radius: 5px;
+    border: 2px solid var(--input-border-color);
+    outline: none;
+    font-size: 1.1rem;
+    padding-left: 0.3rem;
+}
+
+input:focus {
+    appearance: none;
+    border: 2px solid var(--input-border-focused-color);
+    box-shadow: 3px 3px 5px var(--input-border-color);
+}
+
+.form-control label::after {
+    content: "*";
+    color:red;
+}
+
+/* ----------- Bottom Main Content ----------- */
 .bottom-section {
-    padding-bottom: 13rem;
+    margin-top: 2rem;
 }
