@@ -23,13 +23,14 @@
     --main-background-color: rgb(66, 83, 102);
     --input-border-color: #2a2a2a;
     --input-border-focused-color: #b83d47;
+    --button-background-color: #ae3a48;
 }
 
 * {
     padding: 0; 
     margin: 0;
     box-sizing: border-box;
-    /* border: red 1px dotted; */
+    border: red 1px dotted;
     font-family: "Poppins", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", 
     "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -37,6 +38,7 @@
 body {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 /* ----------- Entire Screen ----------- */
@@ -140,11 +142,11 @@ main {
 }
 
 .form-control:nth-child(odd) {
-    margin-right: 8rem;
+    margin-right: 6rem;
 }
 
 .form-control:nth-child(-n+4) {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 label {
@@ -169,18 +171,63 @@ input {
     padding-left: 0.3rem;
 }
 
-input:focus {
+input:hover, input:focus {
     appearance: none;
     border: 2px solid var(--input-border-focused-color);
     box-shadow: 3px 3px 5px var(--input-border-color);
 }
 
-.form-control label::after {
+.form-control label:not([for="phone-number"])::after {
     content: "*";
     color:red;
 }
 
-/* ----------- Bottom Main Content ----------- */
-.bottom-section {
-    margin-top: 2rem;
+/* ----------- Form PseudoClasses ----------- */
+.error {
+    color: var(--button-background-color);
+    font-family: "Poppins";
+    overflow: hidden;
+    margin-top: 4px;
+    text-transform: none;
+    font-size: 1rem;
+    position: absolute;
+    color: red;
 }
+
+/* ----------- Bottom Main Content ----------- */
+
+.bottom-section {
+    margin-top: 4rem;
+}
+
+button[type="submit"] {
+    color: var(--text-color);
+    background-color: var(--button-background-color);
+    padding: 0.8rem 3.5rem;
+    font-size: 1.3rem;
+    border-radius: 7px;
+    border: 2px solid var(--button-background-color);
+    cursor: pointer;
+    box-shadow: 0 5px 0 #993547;
+    letter-spacing: 0.05rem;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.bottom-section p {
+    margin-top: 1.5rem;
+    margin-left: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.bottom-section a {
+    margin-left: 0.5rem;
+    color: var(--button-background-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(255, 255, 255, 0.05);
+}
+
