@@ -1,7 +1,8 @@
-# sign-up-form
+# Sign Up Form
+
+We created a front-end form page built with HTML, CSS, and JavaScript practices. 
+
 Sources/Credit For Images:
 
-https://pixabay.com/illustrations/social-social-network-1206603/
-
-
-https://www.pexels.com/photo/silhouette-of-trees-under-blue-sky-1367179/
+large-sidebar-background.jpg
+Eberhard Grossgasteiger - https://www.instagram.com/eberhard_grossgasteiger/ 
