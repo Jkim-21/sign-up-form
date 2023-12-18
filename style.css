@@ -6,8 +6,8 @@
 }
 
 @font-face { 
-    font-family: "instagram-sans";
-    src: url("./fonts/instagram-sans/Instagram\ Sans.woff") format("woff");
+    font-family: "carena-regular";
+    src: url("./fonts/Carena-Regular.otf");
 }
 
 @font-face { 
@@ -18,7 +18,6 @@
 :root {
     --text-color: rgb(255, 255, 255);
     --sidebar-background-color: rgb(15,28,54);
-    --logo-background-color: rgb(0, 0, 0, 0.6);
     --top-background-color: #222222;
     --main-background-color: rgb(66, 83, 102);
     --input-border-color: #2a2a2a;
@@ -30,9 +29,9 @@
     padding: 0; 
     margin: 0;
     box-sizing: border-box;
-    border: red 1px dotted;
     font-family: "Poppins", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", 
     "Segoe UI Emoji", "Segoe UI Symbol";
+    /* border: red 1px dotted; */
 }
 
 body {
@@ -55,46 +54,43 @@ main {
     min-height: 100%;
     min-width: 40%;
     flex-basis: 40%;
-    background: url(images/large-sidebar-background.png),
-    linear-gradient(to top, rgba(217,70,73,255), rgba(51,34,62,255));
-    background-size: 98% 98%, cover;
+    background: url(images/large-sidebar-background.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-    padding-top: 1rem;
-}
-
-.logo-image2 {
-    width: 23rem;
-    display: block;
-    margin: 0 auto 1rem;
 }
 
 .logo-strip {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    background-color: var(--logo-background-color);
     position: relative;
-    width: 98%;
+    width: 100%;
     margin: auto;
 }
 
 .logo-title {
-    font-size: 4rem;
-    font-family: "instagram-sans";
+    font-size: 3rem;
+    font-family: "carena-regular";
     color: white;
     position: relative;
-    right: 15px;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    top: 1.3rem;
 }
 
 .logo-image {
     max-width: 7rem;
     object-fit: cover;
     position: relative; 
-    right: 10px;
+    margin-left: 14rem;
 }
 
+.logo-image2 {
+    width: 23rem;
+    display: block;
+    margin: 2rem auto 0;
+}
 /* ----------- Main Content ----------- */
 
 .main {

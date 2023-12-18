@@ -16,7 +16,7 @@ for (let i = 0; i < inputs.length; i++) {
 
 submitButton.addEventListener("click", (e) => {
     inputs.forEach(input => {
-        if (!input.checkValidity()) {
+        if (!input.checkValidity() || validationChecker(input) !== "") {
             e.preventDefault();
             input.nextElementSibling.textContent = validationChecker(input);
         }
@@ -35,6 +35,10 @@ function validationChecker(input) {
     
     else if (input.type === "tel" && !input.value.match(numbers)) {
         return "Please Enter a Valid Number";
+    }
+
+    else if (input.type === "tel" && input.value.length < 10) {
+        return "Please Enter a 10 Digit Phone Number";
     }
 
     else if (input.type === "email" && !input.checkValidity()) {
